@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <nuxt />
   </div>
 </template>
@@ -13,7 +13,7 @@ html {
   font-family: var(--roc-grotesk-font);
   font-weight: 300;
   font-style: normal;
-  font-size: 16px;
+  font-size: 62.5%; /* Ré-équilibrage du Rem face au Pixel pour des calculs simples */
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -31,7 +31,7 @@ html {
 
 h1 {
   font-family: var(--masqualero-font);
-  font-size: 70px;
+  font-size: 3rem;
   font-weight: 400;
   line-height: 1em;
 }
@@ -39,10 +39,10 @@ h1 {
 h2 {
   font-family: var(--roc-grotesk-font);
   font-weight: 300;
-  font-size: 20px;
+  font-size: 2rem;
 }
 
-main {
+.container {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
@@ -55,6 +55,14 @@ a {
 
 .wrapper {
   width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-size: 2rem; /* Pour les navigateurs « Responsive » */
 }
 
 
